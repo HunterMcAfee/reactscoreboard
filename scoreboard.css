@@ -1,0 +1,27 @@
+.scoreboard {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #17331F;
+    overflow: hidden;
+}
+
+.team {
+    float: left;
+    width: 45%;
+}
+
+.team-score {
+    display: inline-block;
+    margin: 10px;
+    color: black;
+    font-size: 26px;
+}
+
+.team.Boston {
+    color: green;
+}
+
+.team.Cleveland {
+    color: maroon;
+}
