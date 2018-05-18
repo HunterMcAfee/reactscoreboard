@@ -1,16 +1,39 @@
+const Counter = React.createClass({
+    getInitialState: function() {
+        return {
+            score: 0
+        }
+    },
+    losePoint: function() {
+        this.setState({
+            score: this.state.score - 1
+        })
+    },  
+    addPoint: function() {
+        this.setState({
+            score: this.state.score + 1
+        })
+    },  
+    render: function() {
+        return (
+            <div className="counter">
+                {/* Red */}
+                <button className="btn btn-danger" onClick={this.losePoint}>-</button>
+                <div className="team-score">{this.state.score}</div>
+                {/* Green Button */}
+                <button className="btn btn-success" onClick={this.addPoint}>+</button>
+            </div>
+        )
+    }
+})
+
 function Team(props) {
     return (
         <div className={`team ${props.teamName}`}>
             <div className="team-name">
                 <h3>{props.teamName}</h3>
             </div>
-            <div className="counter">
-                {/* Red */}
-                <button className="btn btn-danger">-</button>
-                <div className="team-score">0</div>
-                {/* Green Button */}
-                <button className="btn btn-success">+</button>
-            </div>
+            <Counter />
         </div>
     )
 }

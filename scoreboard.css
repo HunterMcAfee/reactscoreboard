@@ -8,20 +8,22 @@
 
 .team {
     float: left;
-    width: 45%;
+    width: 50%;
 }
 
 .team-score {
     display: inline-block;
     margin: 10px;
-    color: black;
+    color: white;
     font-size: 26px;
 }
 
 .team.Boston {
-    color: green;
+    background-color: green;
+    color: white;
 }
 
 .team.Cleveland {
-    color: maroon;
+    background-color: maroon;
+    color: white;
 }
